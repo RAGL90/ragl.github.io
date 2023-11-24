@@ -1,0 +1,10 @@
+Este tema se compone por: ACCESO AL DOM, EVENTOS, DRAG AND DROP
+
+    1. ACCESO AL DOM
+    
+    Document Object Model.
+
+    Hay un elemento Window, es el objeto global y se encuentra por cada pestaña o ventana de navegador.
+
+    En los navegadores tienen como objetivo: Definir tipos y funciones.
+    
