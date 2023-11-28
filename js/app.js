@@ -1,0 +1,22 @@
+//El JavaScript debe de estar insertado todo el codigo HTML y CSS antes de que se cargue JS.
+
+/*
+Se pueden añadir eventos a cualquier elemento.
+Al documento, siempre le añadimos un evento para compprobar que todo se ha cargado
+*/
+document.addEventListener("DOMContentLoaded", ()=>{
+    let icon = document.querySelector(".fa-solid");
+    
+    let header = document.querySelector("h1");
+
+    //Añadimos un escuchador de eventos en el área icono
+    icon.addEventListener("click", ()=>{
+       document.body.classList.toggle("light");
+       document.body.classList.toggle("dark");
+       document.body.classList.toggle("tour");
+    })
+});
+
+/* Se activa cuando se ha cargado el DOM sin esperar a Hoja de estilos, 
+pero como antes de cargar este JS, se ha cargado antes CSS, está bien utilizado */
+
