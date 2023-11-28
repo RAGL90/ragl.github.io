@@ -58,7 +58,7 @@ document.querySelector("h1").replaceWith(paragraph); //Esto es otra forma de hac
 //document.body.remove(); //Has roto el body
 
 paragraph.style.textAlign="center";
-paragraph.style.color ="#fff";
+paragraph.style.color ="white";
 paragraph.style.textTransform = "capitalize";
 paragraph.style.backgroundColor = "#000";
 paragraph.style.padding = "2em";
@@ -67,3 +67,6 @@ paragraph.style.padding = "2em";
 paragraph.setAttribute("class","main"); //Creamos el nombre (izq) y el valor del atribute (dcha)
 
 console.log(paragraph.getAttribute("class")); //Nombre del atributo entrecomillado
+paragraph.classList.add("light"); //Añade una clase nueva, SIN SOBREESCRIBIR, setatribute => sobreescribe.
+
+console.log(paragraph.style.cssText);
