@@ -87,12 +87,16 @@ div {
   transition: all 1s ease-in-out;
 }
 
-nav {
+nav{
     padding-top: 2vh;
     font-size: 5rem;
     text-align: center;
     background-color: var(--dark);
     color: white;
+}
+
+.main {
+  margin-top: 2em;
 }
 
 /* ---------------FIN CSS Personaliado para atributes ------------------------ */
