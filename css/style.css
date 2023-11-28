@@ -1,25 +1,79 @@
 :root {
-    font-size: 0.785rem;
-    /* font-family: (Indicar fuente); */
-    vertical-align: baseline;
-    --blue: #0d6edf;
-    --indigo: #6610f2;
-    --purple: #6f42c1;
-    --pink: #d63384;
-    --red: #dc3545;
-    --orange: #fd7e14;
-    --yellow: #ffc107;
-    --green: #198754;
-    --teal: #30c997;
-    --cyan: #0dcaf0;
-    --black: #000;
-    box-sizing: border-box;
+  font-size: 0.785rem;
+  font-family: "Rubik", sans-serif;
+  vertical-align: baseline;
+  --blue: #0d6edf;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #d63384;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #198754;
+  --teal: #30c997;
+  --cyan: #0dcaf0;
+  --dark: #292a2b;
+  color: #fff;
+  box-sizing: border-box;
 }
 
-*,::before,::after{
-    box-sizing: border-box;
-    outline: 0 none;
-    margin: 0;
-    padding: 0;
-    border: 0;
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  outline: 0 none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Titillium web", sans-serif;
+}
+h1 {
+  font-size: 3.5rem;
+  color: var(--blue);
+}
+h2 {
+  font-size: 2.25rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+h4 {
+  font-size: 1.1rem;
+}
+h5 {
+  font-size: 0.9rem;
+}
+h6 {
+  font-family: 0.7rem;
+}
+
+/* Bootstrap Breakpoints */
+/* Small devices (landscape phones, 576px and up) */
+
+/* S Device */
+@media (min-width: 576px) {
+}
+
+/* M Device */
+@media (min-width: 768px) {
+}
+
+/* L Device */
+@media (min-width: 992px) {
+}
+
+/* XL Device */
+@media (min-width: 1200px) {
+}
+
+/* XXL Device */
+@media (min-width: 1400px) {
 }
