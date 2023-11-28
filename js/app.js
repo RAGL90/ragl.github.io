@@ -57,6 +57,7 @@ document.querySelector("h1").replaceWith(paragraph); //Esto es otra forma de hac
 //paragraph.remove(); //Elimina la variable body
 //document.body.remove(); //Has roto el body
 
+//Esto es para que sepamos que podemos hacerlo aunque no es recomendable.
 paragraph.style.textAlign="center";
 paragraph.style.color ="white";
 paragraph.style.textTransform = "capitalize";
