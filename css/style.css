@@ -14,6 +14,11 @@
     --cyan: #0dcaf0;
     --dark: #292a2b;
     --white: #fff;
+    --darkblue100: #0d1b2a;
+    --darkblue80: #1b263b;
+    --darkblue60: #415a77;
+    --darkblue40: #778da9;
+    --darkblue0: #e0e1dd;
     box-sizing: border-box;
   }
   
@@ -33,24 +38,39 @@
     justify-content: center;
     align-items: center;
   }
-
+  
   .light{
     background-color: var(--yellow);
     color: var(--dark);
     transition: all 1s ease-in-out;
   }
-
+  
   .fa-solid{
     margin-left: 25px;
     transition: animation 1s ease-in-out;
   }
-
+  
   .dark{
     background-color: var(--green);
     color: var(--white);
     transition: all 1s ease-in-out;
   }
-
+  
+  #A {
+    color: var(--darkblue100) !important;
+  }
+  #B {
+    color: var(--darkblue80)  !important;
+  }
+  #C {
+    color: var(--darkblue60) !important;
+  }
+  #D {
+    color: var(--darkblue40) !important;
+  }
+  #E {
+    color: var(--darkblue0) !important;
+  }
   .tour{
     transform: rotate(180deg) !important;
   }
