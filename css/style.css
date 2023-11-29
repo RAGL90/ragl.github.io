@@ -52,7 +52,7 @@
   }
 
   .tour{
-    transform: rotate(180deg);
+    transform: rotate(180deg) !important;
   }
 
   /* Buzz Out */
@@ -158,8 +158,7 @@
   animation-iteration-count: 1;
 }
 
-
-.spin{
+.spin {
   -webkit-animation: spin 1000ms linear both;
   animation: spin 1000ms linear both;
 }
