@@ -9,8 +9,10 @@ document.addEventListener("DOMContentLoaded", ()=>{
     
     let header = document.querySelector("h1");
 
-    //Añadimos un escuchador de eventos en el área icono
-    icon.addEventListener("click", ()=>{
+   
+    icon.addEventListener("click", (event)=>{
+       console.log(event.target);
+       console.log(event.type);
        document.body.classList.toggle("light");
        document.body.classList.toggle("dark");
        document.body.classList.toggle("tour");
