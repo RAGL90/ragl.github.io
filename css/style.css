@@ -67,6 +67,7 @@ body {
     padding: 2em;
     margin: 10% auto;
     background-color: var(--white);
+    border-radius: .3rem;
   }
 
     .main .container{
