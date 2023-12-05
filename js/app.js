@@ -45,8 +45,22 @@ window.addEventListener("load", () => {
       */
       //console.log(id);
 
-      //Creamos una nueva FILA un nuevo elemento TR
-      let newRow = document.createElement('tr');
+      //newRow tiene añadido el ID, el TR y el contenido. AHORA LO INSERTAMOS tras tbody:
+      document.querySelector('tbody').appendChild(generateRow(id,text));
+      
+      //Eliminamos la etiqueta de alerta o instrucciones
+      if (!alert.classList.contains("dismissible")) {
+        alert.classList.add ("dismissible"); 
+      }
+    }
+
+  });
+
+});
+
+
+const generateRow = (id, text) =>{
+  let newRow = document.createElement('tr');
       newRow.setAttribute("id",id); //Añadimos a la etiqueta html id el valor de la variable id
       newRow.innerHTML = `
       <td>
@@ -65,17 +79,7 @@ window.addEventListener("load", () => {
                     <i class="fa-solid fa-trash fa-stack-1x fa-inverse"></i>
                   </span>
       </td>
-      `; //Añadimos todo el HTML desde despues de TR e incluimos la variable "text"
-
-      //newRow tiene añadido el ID, el TR y el contenido. AHORA LO INSERTAMOS tras tbody:
-      document.querySelector('tbody').appendChild(newRow);
-      
-      //Eliminamos la etiqueta de alerta o instrucciones
-      if (!alert.classList.contains("dismissible")) {
-        alert.classList.add ("dismissible"); 
-      }
-    }
-
-  });
-
-});
+      `;
+      console.log(newRow);
+      return newRow;
+};
