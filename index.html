@@ -20,6 +20,14 @@
   <body>
     <div class="main">
       <h1>Task List</h1>
+      <div class="btn-header">
+        <h5 class="filtHeader"">Filter task</h5>
+        <div class="btn-group" role="group">
+          <button type="button" class="btn btn-primary"  data-mdb-ripple-init>All</button>
+          <button type="button" class="btn btn-primary"  data-mdb-ripple-init>To Do</button>
+          <button type="button" class="btn btn-primary"  data-mdb-ripple-init>Done</button>
+        </div>
+      </div>
       <div class="alert dismissible">
         <!-- "dismissible" es una clase para hacerla desaparecer -->
         Please, enter some text.
@@ -46,7 +54,25 @@
               <tr id="0">
                 <td>
                   <i class="fa-solid fa-circle-check fa-2x"></i>
-                  <span class="task" contenteditable="true">Learn HTML!</span>
+                  <span class="task" contenteditable="true" data-completed="false">Learn HTML!</span>
+                </td>
+                <td>
+                  <span class="fa-stack fa-2x">
+                    <i class="fa-solid fa-square fa-stack-2x"></i>
+                    <i class="fa-solid fa-pencil fa-stack-1x fa-inverse"></i>
+                  </span>
+                </td>
+                <td>
+                  <span class="fa-stack fa-2x">
+                    <i class="fa-solid fa-square fa-stack-2x"></i>
+                    <i class="fa-solid fa-trash fa-stack-1x fa-inverse"></i>
+                  </span>
+                </td>
+              </tr>
+              <tr id="1">
+                <td>
+                  <i class="fa-solid fa-circle-check fa-2x"></i>
+                  <span class="task" contenteditable="true" data-completed="true"><del>CSS</del></span>
                 </td>
                 <td>
                   <span class="fa-stack fa-2x">

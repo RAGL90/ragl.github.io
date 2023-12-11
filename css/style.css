@@ -217,16 +217,54 @@ body {
         color:var(--teal);
     }  
   .main table .task{
-    background-color: white;
     display: inline-block;
     padding: .3em;
     border-radius: .3rem;
     margin-top: .3em;
   }
+  .editable{
+    background-color: white;
+  }
+ 
+  
 
   .main .dismissible {
     opacity: 0 !important;
     height: 0 !important;
     padding: 0 !important;
     transition: all 0.3s linear;
+  }
+
+  .btn-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+
+    border-radius: 5px;
+  }
+  .btn-header h5{
+    color: var(--green);
+    padding: 0.3em;
+    font-size: 2em;
+    font-family: "Lato" sans-serif;
+  }
+  .btn-group{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .btn-primary{
+    margin: 0.4em;
+    padding: 0.3em;
+    font-size: large;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--green);
+    border-radius: 5px;
   }
