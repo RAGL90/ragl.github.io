@@ -1,0 +1,95 @@
+:root {
+  font-size: 0.875rem;
+  font-family: "Rubik", sans-serif;
+  vertical-align: baseline;
+  --blue: #0d6edf;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #d63384;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #198754;
+  --teal: #30c997;
+  --cyan: #0dcaf0;
+  --dark: #292a2b;
+  --white: #fff;
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  outline: 0 none;
+}
+/* Bootstrap Breakpoints */
+/* Small devices (landscape phones, 576px and up) */
+  
+/* S Device */
+@media (min-width: 576px) {
+}
+  
+/* M Device */
+@media (min-width: 768px) {
+}
+  
+/* L Device */
+@media (min-width: 992px) {
+}
+  
+/* XL Device */
+@media (min-width: 1200px) {
+}
+  
+/* XXL Device */
+@media (min-width: 1400px) {
+}
+
+body{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: var(--dark);
+}
+
+div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.7rem;
+  margin-top: 5%;
+  width: 150px;
+  min-height: 150px;
+  background-color: var(--green);
+  text-align: center;
+}
+
+div#dropTarget{
+  background-color: var(--blue);
+  flex-direction: column;
+}
+
+span {
+  display: block;
+  width: 100%;
+  text-align: center;
+  border: 1px solid var(--dark);
+  margin: .5em auto;
+  padding: .5em 0;
+  color: var(--dark);
+  border-radius: .3rem;
+}
+
+#carro{
+  width: 60%;
+  margin: 3em auto;
+  min-height: 100px;
+  background-color: var(--yellow);
+  flex-direction: column;
+  padding: 1em;
+}

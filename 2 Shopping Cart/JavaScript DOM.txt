@@ -1,0 +1,35 @@
+Este tema se compone por: ACCESO AL DOM, EVENTOS, DRAG AND DROP
+
+    1. ACCESO AL DOM
+    
+    Document Object Model. (Arbol de elementos que te muestra el navegador)
+
+    Hay un elemento Window, es el objeto global y se encuentra por cada pestaña o ventana de navegador.
+
+    En los navegadores tienen como objetivo: Definir tipos y funciones.
+    
+
+    QuerySelector => Selecciona un elemento del DOM, puedes seleccionarlo por la clase escrita como en css (".class"), o el nombre de la etiqueta.
+
+    querySelectorAll => Selecciona MÚLTIPLES elementos. Es una lista de nodo (un array).
+
+document.body.parentNode //Saber el número de elementos padres que tiene
+
+document.body.children.length // Saber el número de elementos hijos
+document.body.childElementCount // Saber el número de elementos hijos (otra forma).
+
+document.body.firstChild //Primer elemento, aunque sea el texto.
+document.body.firstElementChild // Primer ELEMENTO hijo, ignora el texto.
+
+document.body.children[0] //Coge el primer elemento
+
+document.body.lastChild // Ultimo elemento hijo, aunque sea texto
+document.body.lastElementChild //Ultimo nodo
+
+document.body.nextElementSibling
+document.body.previousElementSibling  
+
+
+Diferencias entre parentNode y parentElement:
+    parentNode - Nos regresará al nodo [especificado en el arbol], devuelve null si no está en la lista de nodo.
+    parentElement - Si no tiene padre o el padre no es un elemento, devolverá "null" 
