@@ -1,0 +1,22 @@
+Clases a definir:
+
+*header*
+    Tiene las clases:
+    
+    d-flex | display-flex
+    flex-column
+    flex-sm-row | Un breakpoint para distribuirse en fila a partir de Small, en lugar de en columnas.
+    justify-content-between | justify-content: space-between;
+    py-4 | Padding por arriba y por abajo (Eje Y)
+    px-sm-5 | Padding lateral (eje X), tamaño small, a partir de 500px. De lo contrario no hay padding
+    mb-3 | Margin bot
+    shadow-sm | Sombra a partir de los móviles
+    fixed-top | Que se mantenga fijado a la zona superior de la ventana, y acompañe en el scroll.
+    bg-success | Background de color verder 
+    text-white | color: white.
+
+*h5*
+    Tiene las clases:
+    fw-bold | font weight
+    my-2-md-0 | A partir de las tablets 
+    me-md-3 | Margen horizontal por la derecha de  tamaño 3
