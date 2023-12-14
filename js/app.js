@@ -10,6 +10,11 @@ window.addEventListener("load", () => {
   let remove = document.querySelectorAll(".fa-trash");
   let edit = document.querySelectorAll(".fa-pencil");
   let task = document.querySelectorAll(".task");
+  let doneButton = document.querySelector(".btn-group").lastElementChild;
+  let toDoButton =
+    document.querySelector(".btn-group").lastElementChild
+      .previousElementSibling;
+  let AllButton = document.querySelector(".btn-group").firstElementChild;
   //console.log(done); //Es una "NodeList"
   //console.log(arrow);
 
@@ -93,8 +98,19 @@ window.addEventListener("load", () => {
       editTask(e, true); //Llamada a editTask (90)
     });
   });
-});
 
+  doneButton.addEventListener("click", () => {
+    showDoneTask(task);
+  });
+
+  toDoButton.addEventListener("click", () => {
+    showToDoTask(task);
+  });
+
+  AllButton.addEventListener("click", () => {
+    showAllTask(task);
+  });
+});
 // Functions (Funciones que no deben cargarse hasta ser llamadas)
 
 //Funcion EditTask para editar tareas del Checklist
@@ -108,7 +124,10 @@ const editTask = (e, onFocus) => {
       if (e.code == "Escape") {
         editable.target.classList.remove("editable");
         editable.target.blur(); //Evento para quitar el foco
-        if (editable.target.innerHTML == "" || editable.target.textContent.trim() == "") {
+        if (
+          editable.target.innerHTML == "" ||
+          editable.target.textContent.trim() == ""
+        ) {
           removeTask(editable, true);
           console.log("Línea borrada");
         }
@@ -116,7 +135,10 @@ const editTask = (e, onFocus) => {
     });
     editable.target.addEventListener("blur", () => {
       editable.target.classList.remove("editable");
-      if (editable.target.innerHTML == "" || editable.target.textContent.trim() == "") {
+      if (
+        editable.target.innerHTML == "" ||
+        editable.target.textContent.trim() == ""
+      ) {
         removeTask(editable, true);
         console.log("Línea borrada");
       }
@@ -180,21 +202,49 @@ const generateRow = (id, text) => {
                   </span>
       </td>
       `;
-     newRow.firstElementChild.firstElementChild.addEventListener("click",(e) => {
-      taskDone(e);
-     });
-     newRow.firstElementChild.lastElementChild.addEventListener("click", (e) => {
-      //console.log("Aqui escucho!");
-      editTask(e, true);
-     });
-     newRow.firstElementChild.nextElementSibling.firstElementChild.addEventListener("click", (e) => {
+  newRow.firstElementChild.firstElementChild.addEventListener("click", (e) => {
+    taskDone(e);
+  });
+  newRow.firstElementChild.lastElementChild.addEventListener("click", (e) => {
+    //console.log("Aqui escucho!");
+    editTask(e, true);
+  });
+  newRow.firstElementChild.nextElementSibling.firstElementChild.addEventListener(
+    "click",
+    (e) => {
       //console.log("Aqui escucho desde el icono!");
       editTask(e, false);
-     });
-     newRow.lastElementChild.firstElementChild.addEventListener("click", (e) => {
-      removeTask(e, false);
-     });
+    }
+  );
+  newRow.lastElementChild.firstElementChild.addEventListener("click", (e) => {
+    removeTask(e, false);
+  });
   return newRow;
 };
 
-//Añadir Done, To Do
+const showDoneTask = (e) => {
+  let task = document.querySelectorAll(".task");
+  task.forEach((item) => {
+    console.log("working");
+    if (item.getAttribute("data-completed") === "false") {
+      item.parentElement.parentElement.classList.add("dismissible");
+    }
+  });
+};
+
+const showToDoTask = (e) => {
+  let task = document.querySelectorAll(".task");
+  task.forEach((item) => {
+    console.log("working");
+    if (item.getAttribute("data-completed") === "true") {
+      item.parentElement.parentElement.classList.add("dismissible");
+    }
+  });
+};
+const showAllTask = (e) => {
+  let task = document.querySelectorAll(".task");
+  task.forEach((item) => {
+    console.log("working");
+    item.parentElement.parentElement.classList.remove("dismissible");
+  });
+};
