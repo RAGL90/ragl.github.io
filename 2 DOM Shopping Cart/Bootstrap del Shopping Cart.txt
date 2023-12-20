@@ -15,8 +15,17 @@ Clases a definir:
     bg-success | Background de color verder 
     text-white | color: white.
 
-*h5*
+    *h5*
     Tiene las clases:
     fw-bold | font weight
     my-2-md-0 | A partir de las tablets 
     me-md-3 | Margen horizontal por la derecha de  tamaño 3
+
+    nav > *a*
+        p-2 | Padding 2
+
+
+*section*
+    pricing-header | 
+
+
